@@ -1,0 +1,4 @@
+pydantic==2.9.2
+clickhouse-connect==0.8.5
+requests==2.32.3
+loguru==0.7.2
