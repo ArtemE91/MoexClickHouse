@@ -7,4 +7,4 @@ broker = RabbitBroker(url=settings.rabbit_url)
 
 async def publish_task_ticker(ticker: str):
     async with broker as br:
-        await br.publish(ticker, "tasks")
+        await br.publish(ticker, settings.queue_tasks)

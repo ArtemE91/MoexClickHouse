@@ -5,6 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 BASE_DIR = Path(__file__).parent.parent
+DATA_DIR = BASE_DIR / "data"
 
 
 class ConnectCh(BaseModel):
@@ -18,11 +19,12 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(
         env_nested_delimiter='__',
         env_file_encoding='utf-8',
-        env_file=BASE_DIR / "config" / ".env"
+        env_file=BASE_DIR / "config" / ".env.prod"
     )
 
     clickhouse: ConnectCh = ConnectCh()
-    rabbit_url: str = "amqp://guest:guest@127.0.0.1:5672/en0"
+    rabbit_url: str = "amqp://guest:guest@127.0.0.1:5672/"
+    queue_tasks: str = "tasks"
 
 
 settings = Settings()

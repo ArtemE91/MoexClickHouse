@@ -25,3 +25,9 @@ class Record(BaseModel):
     trading_session: int | None = None
     curren_cyid: str
     trendclspr: float | None = None
+
+
+class Volume(BaseModel):
+    year: int
+    sec_id: str
+    volume: int
