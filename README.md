@@ -41,8 +41,6 @@ clickhouse-client # or "clickhouse-client --password" if you've set up a passwor
 ```sql
 CREATE DATABASE moex
 
-GRANT ALL PRIVILEGES ON moex.records TO default
-
 CREATE TABLE moex.records (
     board_id String,
     trade_date Date,

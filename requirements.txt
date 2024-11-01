@@ -2,3 +2,7 @@ pydantic==2.9.2
 clickhouse-connect==0.8.5
 requests==2.32.3
 loguru==0.7.2
+"faststream[rabbit]"
+"faststream[cli]"
+fastapi==0.115.3
+pydantic-settings==2.6.1
